@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 
 function Contact() {
 
-  let[name ,setName]= useState()
-  let[email,setEmail]=useState()
-  let[subject,setSubject]=useState()
-  let[message,setMessage]=useState()
+  let[name ,setName]= useState("")
+  let[email,setEmail]=useState("")
+  let[subject,setSubject]=useState("")
+  let[message,setMessage]=useState("")
 
 
 
@@ -22,14 +22,16 @@ function Contact() {
 };
   return (
     <div className='conatiner'>
-      <div className='form'>
-       <from onSubmit={handelsubmit} methods='post'>
-
-      <input className='name' type='text'name='uname'placeholder='Enter your name' value ={name}onClick={(e=>setName(e.target.value))}>Name</input>
-      <input  className ="email"type='text'name='uname'placeholder='Enter your email' value={email}onClick={(e=>setEmail(e.target.value))}>Email</input>
-      <input  className ="subject"type='text'name='uname'placeholder='Enter your subject'value={subject} onClick={(e=>setSubject(e.target.value))}>subject</input>
-      <textarea className='massage'placeholder='Enter your massage' value={message}onClick={(e=>setMessage(e.target.value))}></textarea>
-      <div className='btn'>
+     
+       <div className='form'>
+       <from onSubmit={handleSubmit} methods='post'>
+      
+                <input className='name' type="text" placeholder='Enter Your name' value={name} onChange={e => setName(e.target.value)}  />
+                <input className='email' type="email" placeholder='Enter Your email' value={email} onChange={e => setEmail(e.target.value)} />
+                <input className='subject' type="text" placeholder='Enter Your subject' value={subject} onChange={e => setSubject(e.target.value)} />
+                <textarea className='message' placeholder='Enter Your message' value={message} onChange={e => setMessage(e.target.value)} ></textarea>
+                <div className='btn'>
+   
 
                 <button type='submit'>Submit</button>
                 </div>
