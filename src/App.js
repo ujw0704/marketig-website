@@ -7,7 +7,7 @@ import Body from "./Components/Body";
 import Login from "./Components/Login";
 import About from './About';
 import Dashboard from './Components/Dashboard';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route,Links } from 'react-router-dom';
 
 
 
@@ -17,7 +17,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
     <Header/>
+
     <Routes>
+  
     <Route path="/body" element={<Body />}></Route>
    
    <Route path='/login' element ={<Login/>}></Route>
@@ -26,6 +28,7 @@ function App() {
    <Route path="/Dashboard" element ={<Dashboard/>}></Route>
    <Route  path='/Contact' element={<Contact/>}>
    </Route>
+   
 
     </Routes>
    <Footer/>

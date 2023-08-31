@@ -30,7 +30,7 @@ function Contact() {
                 <input className='email' type="email" placeholder='Enter Your email' value={email} onChange={e => setEmail(e.target.value)} />
                 <input className='subject' type="text" placeholder='Enter Your subject' value={subject} onChange={e => setSubject(e.target.value)} />
                 <textarea className='message' placeholder='Enter Your message' value={message} onChange={e => setMessage(e.target.value)} ></textarea>
-                <div className='btn'>
+                <div className='btns'>
    
 
                 <button type='submit'>Submit</button>
