@@ -77,7 +77,7 @@ import img5 from './img/pexels-pixabay-67557.jpg';
 import img6 from "./img/pexels-saad-khan-3687139.jpg";
 import img7 from "./img/pexels-jody-parks-4668487.jpg";
 import { Link } from 'react-router-dom';
-
+import Dashboard from './Dashboard';
 function Body() {
   const images = [
     { id: 1, image: img1 },

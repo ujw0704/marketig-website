@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 function Dashboard() {
-  const { image } = useParams();
+  const { imageData} = useParams();
   const [imageVisible, setImageVisible] = useState(false);
 
   const toggleImageVisibility = () => {
@@ -14,7 +14,7 @@ function Dashboard() {
       <button onClick={toggleImageVisibility}>Toggle Image</button>
       {imageVisible && (
         <img
-          src={decodeURIComponent(image)}
+          src={decodeURIComponent(imageData)}
           alt="Clicked Image"
           style={{ height: '200px', width: '200px' }}
 
